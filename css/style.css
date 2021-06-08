@@ -1,0 +1,289 @@
+@charset "UTF-8";
+li {
+  list-style: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  ._sp {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  ._pc {
+    display: block;
+  }
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Hiragino Mincho Pro',serif;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.cmn-title {
+  margin-top: 40px;
+  color: black;
+  text-align: center;
+  font-size: 32px;
+}
+
+.cmn-subtitle {
+  margin-top: 20px;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  /*display: block;*/
+  text-transform: capitalize;
+  font-family: "Times New Roman", "YuMincho", "Hiragano Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+
+.header {
+  /*.nav-item {
+    &:nth-child(n + 2) {
+      padding-left: 10px;
+    }
+    a {
+      color: white;
+    }
+  }*/
+}
+
+.header .header-fixed {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: right;
+  height: 80px;
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.header .header-logo {
+  width: 100px;
+  margin-left: 30px;
+}
+
+.header .nav-btn {
+  width: 52px;
+  height: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  outline: none;
+  position: relative;
+  right: 30px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .header .nav-btn {
+    display: none;
+  }
+}
+
+.header .nav-btn.-active span {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header .nav-btn.-active span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .nav-btn.-active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .nav-btn.-active span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .nav-btn span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.header .nav-btn span:first-child {
+  top: 0;
+}
+
+.header .nav-btn span:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.header .nav-btn span:last-child {
+  bottom: 0;
+}
+
+.header .header-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(154, 205, 50, 0.8);
+  padding-top: 120px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+@media print, screen and (min-width: 768px) {
+  .header .header-nav {
+    width: initial;
+    background-color: transparent;
+    padding-top: 0;
+    z-index: 3;
+    left: inherit;
+    right: 0;
+    top: 15px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.header .header-nav.-active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.header .nav-list {
+  text-align: center;
+  padding-bottom: 45px;
+  font-size: 20px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .header .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 25px;
+    /*padding-top: 15px;
+      padding-bottom: 15px;*/
+  }
+}
+
+.header .nav-list .nav-item + .nav-item {
+  margin-top: 20px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .header .nav-list .nav-item + .nav-item {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+
+.header .nav-list a {
+  /*color: cl(white);*/
+  font-size: 24px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .header .nav-list a {
+    font-size: 18px;
+  }
+}
+
+.header .nav-list a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.header .scroll {
+  background-color: pink;
+}
+
+.gnav {
+  width: 95%;
+  max-width: 400px;
+  margin: 150px auto 0;
+  /*.openが付与された時、表示の設定*/
+}
+
+.gnav .gnav-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gnav .gnav-contents .menu {
+  width: calc(100% / 2);
+  text-align: center;
+  cursor: pointer;
+}
+
+.gnav .gnav-contents .menu div {
+  padding: 10px 0;
+  background-color: #1e90ff;
+}
+
+.gnav .gnav-contents .menu .dropdown-menu {
+  margin: 0;
+  padding: 0;
+  background-color: #6495ed;
+  /*非表示の設定*/
+  display: none;
+}
+
+.gnav .gnav-contents .menu .dropdown-menu.open {
+  display: block;
+}
+
+.gnav .gnav-contents .menu .dropdown-menu li {
+  padding: 10px 0;
+}
+/*# sourceMappingURL=style.css.map */

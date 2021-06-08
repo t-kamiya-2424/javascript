@@ -1,0 +1,31 @@
+.gnav {
+  width: 95%;
+  max-width: 400px;
+  margin: 150px auto 0;
+  .gnav-contents {
+    display: flex;
+  }
+  .gnav-contents .menu {
+    width: calc(100% / 2);
+    text-align: center;
+    cursor: pointer;
+  }
+  .gnav-contents .menu div {
+    padding: 10px 0;
+    background-color: #1e90ff;
+  }
+  .gnav-contents .menu .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    background-color: #6495ed;
+    /*非表示の設定*/
+    display: none;
+  }
+  /*.openが付与された時、表示の設定*/
+  .gnav-contents .menu .dropdown-menu.open {
+    display: block;
+  }
+  .gnav-contents .menu .dropdown-menu li {
+    padding: 10px 0;
+  }
+}
